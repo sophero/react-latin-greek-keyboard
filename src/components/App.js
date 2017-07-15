@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 // import Textbox from './Textbox';
-import romanToGreek from './romanToGreek';
-import doubleLetters from './doubleLetters';
 import Greek from './Greek';
 import Latin from './Latin';
 
@@ -10,8 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      useLatin: true,
-      useGreek: false
+      useLatin: false,
+      useGreek: true
     }
   }
 
