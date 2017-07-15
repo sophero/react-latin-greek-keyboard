@@ -1,38 +1,36 @@
 import React, { Component } from 'react';
-import Textbox from './Textbox';
+// import Textbox from './Textbox';
 import romanToGreek from './romanToGreek';
 import doubleLetters from './doubleLetters';
+import Greek from './Greek';
+import Latin from './Latin';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      useLatin: false,
-      useGreek: true
+      useLatin: true,
+      useGreek: false
     }
   }
 
   render() {
-    let langFunc;
+    let langComponent;
     if (this.state.useLatin) {
-      langFunc = this.renderLatin;
+      langComponent = <Latin />
     } else if (this.state.useGreek) {
-      langFunc = this.renderGreek;
+      langComponent = <Greek />
     }
+    // this.state.useLatin ? textarea = <Latin /> : this.state.useGreek? textarea = <Greek />
 
     return (
-      <Textbox />
+      <div>
+        {langComponent}
+      </div>
     );
   }
 
-  renderLatin() {
-
-  }
-
-  renderGreek() {
-
-  }
 
 }
 
