@@ -10,9 +10,11 @@ var doubleLetters = {
   "ΠS": "Ψ",
 
   'φq': 'ϕ',
+  'ϕq': 'φ',
 
   "σ ": 'ς ',
-  "σq": 'ς'
+  "σq": 'ς',
+  "ςq": 'σ'
 };
 
 export default doubleLetters;

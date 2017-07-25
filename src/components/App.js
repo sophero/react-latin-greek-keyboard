@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Textbox from './Textbox';
 import Greek from './Greek';
 import Latin from './Latin';
 
@@ -20,7 +19,6 @@ class App extends Component {
     } else if (this.state.useGreek) {
       langComponent = <Greek />
     }
-    // this.state.useLatin ? textarea = <Latin /> : this.state.useGreek? textarea = <Greek />
 
     return (
       <div>

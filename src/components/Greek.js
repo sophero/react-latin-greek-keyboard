@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import romanToGreek from './romanToGreek';
-import doubleLetters from './doubleLetters';
+import charMappings from './charMappings';
 
 class Greek extends Component {
 
@@ -36,15 +35,23 @@ class Greek extends Component {
   updateText(event) {
     let newText = event.target.value;
     let ind = 1 + this.firstDiffIndex(newText, this.state.text);
-    for (var p in romanToGreek) {
-      if (romanToGreek.hasOwnProperty(p)) {
-        newText = newText.replace(RegExp(p), romanToGreek[p]);
-      }
+
+    for (let k = 0; k < charMappings.length; k++) {
+      newText = this.replaceKeysWithValues(charMappings[k], newText);
     }
     this.setState({
       text: newText,
       index: ind
     });
+  }
+
+  replaceKeysWithValues(obj, string) {
+    for (var p in obj) {
+      if (obj.hasOwnProperty(p)) {
+        string = string.replace(RegExp(p), obj[p]);
+      }
+    }
+    return string;
   }
 
   firstDiffIndex(str1, str2) {
