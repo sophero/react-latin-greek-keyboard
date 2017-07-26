@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import charMappings from './charMappings';
+import '../css/textbox.css';
 
 class Greek extends Component {
 
@@ -19,6 +20,7 @@ class Greek extends Component {
         value={this.state.text}
         placeholder="Type your text here."
         ref={(input) => { this.textArea = input; }}
+        className="textbox"
       >
       </textarea>
     );
