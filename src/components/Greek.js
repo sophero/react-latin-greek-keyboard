@@ -48,7 +48,8 @@ class Greek extends Component {
   replaceKeysWithValues(obj, string) {
     for (var p in obj) {
       if (obj.hasOwnProperty(p)) {
-        string = string.replace(RegExp(p), obj[p]);
+        string = string.replace(p, obj[p]); //assuming only one change at a time!!
+        // string = string.replace(RegExp(p), obj[p]);
       }
     }
     return string;
