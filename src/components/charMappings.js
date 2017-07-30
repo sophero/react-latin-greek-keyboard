@@ -11,4 +11,16 @@ let charMappings = [
   sublinearDot
 ];
 
+// let oneToOne = [
+//   romanToGreek,
+//   sublinearDot
+// ];
+//
+// let twoToOne = [
+//   doubleLetters,
+//   circumflex,
+//   roughBreathing,
+//   smoothBreathing
+// ]
+
 export default charMappings;
